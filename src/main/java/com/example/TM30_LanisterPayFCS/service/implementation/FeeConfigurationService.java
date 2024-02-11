@@ -29,7 +29,7 @@ import static com.example.TM30_LanisterPayFCS.utils.HardcodedValues.*;
 @AllArgsConstructor
 @Service
 public class FeeConfigurationService implements ConfigurationService {
-    private FeeConfigEntryRepository feeConfigEntryRepository;
+    private final FeeConfigEntryRepository feeConfigEntryRepository;
     @Override
     public ConfigResponse processFeeConfigurationSpec(ConfigRequest request) {
         if(request.getFeeConfigurationSpec().isEmpty()){

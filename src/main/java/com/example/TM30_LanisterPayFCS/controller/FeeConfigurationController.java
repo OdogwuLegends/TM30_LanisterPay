@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class FeeConfigurationController {
 
-    private ConfigurationService configurationService;
+    private final ConfigurationService configurationService;
     @PostMapping("/fees")
     public ResponseEntity<ConfigResponse> processFeeConfigurationSpec(@RequestBody ConfigRequest request){
         ConfigResponse response = configurationService.processFeeConfigurationSpec(request);
